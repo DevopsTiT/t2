@@ -1,0 +1,23 @@
+# Production — copy to terraform.tfvars (gitignored). Never commit real keys.
+dt_env_url   = "https://REPLACE_ME.live.dynatrace.com"
+dt_api_token = "dt0c01.REPLACE_ME"
+
+pagerduty_integration_keys = {
+  payments      = "REPLACE_ME_PD_KEY"
+  orders        = "REPLACE_ME_PD_KEY"
+  notifications = "REPLACE_ME_PD_KEY"
+}
+
+slack_webhook_urls = {
+  payments      = "https://hooks.slack.com/services/REPLACE_ME"
+  orders        = "https://hooks.slack.com/services/REPLACE_ME"
+  notifications = "https://hooks.slack.com/services/REPLACE_ME"
+}
+
+synthetic_locations = [
+  "GEOLOCATION-6F55B7E4B5E7A52F", # Tokyo
+  "GEOLOCATION-D15FBAABA11A2D7D"  # Singapore
+]
+
+enable_grail_activation = false
+dashboard_owner         = "terraform-sre"

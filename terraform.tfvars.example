@@ -1,0 +1,27 @@
+# Copy to terraform.tfvars (gitignored) and replace REPLACE_ME values.
+# Never commit real tokens.
+
+environment = "dev"
+
+dt_env_url   = "https://REPLACE_ME.live.dynatrace.com"
+dt_api_token = "dt0c01.REPLACE_ME"
+
+# Optional maps (empty in pure-TF learning mode)
+pagerduty_integration_keys = {
+  # payments = "REPLACE_ME_PD_KEY"
+}
+
+slack_webhook_urls = {
+  # payments = "https://hooks.slack.com/services/REPLACE_ME"
+}
+
+synthetic_locations = [
+  "GEOLOCATION-6F55B7E4B5E7A52F" # Tokyo — replace with your tenant geo IDs
+]
+
+enable_grail_activation = false
+dashboard_owner         = "terraform-sre"
+
+# Prefer defining services in environments/*/main.tf (see those files).
+# This block is only for a single-root experiment:
+# services = { ... }
